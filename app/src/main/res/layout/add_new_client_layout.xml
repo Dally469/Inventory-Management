@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="9dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/client_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:layout_margin="3dp"
+            android:hint="Names"/>
+        <EditText
+            android:id="@+id/client_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:inputType="phone"
+            android:hint="Phone"/>
+        <EditText
+            android:id="@+id/client_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:inputType="text"
+            android:layout_margin="3dp"
+            android:hint="Company name"/>
+        <EditText
+            android:id="@+id/client_company_tin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="9dp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/myedittext"
+            android:hint="TIN number"/>
+        <EditText
+            android:id="@+id/client_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:layout_margin="3dp"
+            android:hint="Address"/>
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:text="Save Client"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:drawableTint="@color/colorWhite"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/mybuttton"
+            android:layout_gravity="right"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

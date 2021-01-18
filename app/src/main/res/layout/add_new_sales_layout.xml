@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="9dp">
+
+        <EditText
+            android:id="@+id/client_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:layout_margin="3dp"
+            android:hint="Client Name"/>
+        <EditText
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:layout_margin="3dp"
+            android:hint="Product Name"/>
+        <EditText
+            android:id="@+id/product_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:inputType="numberDecimal"
+            android:hint="Quantity"/>
+        <EditText
+            android:id="@+id/product_price_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:editable="false"
+            android:inputType="numberDecimal"
+            android:layout_margin="3dp"
+            android:hint="Price"/>
+        <EditText
+            android:id="@+id/product_price_paid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:inputType="numberDecimal"
+            android:layout_margin="3dp"
+            android:hint="Paid Amount"/>
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/product_price_remain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myedittext"
+            android:padding="9dp"
+            android:inputType="numberDecimal"
+            android:layout_margin="3dp"
+            android:hint="Remain Amount"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:text="Save Sales"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:padding="5dp"
+            android:drawableTint="@color/colorWhite"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/mybuttton_gray"
+            android:layout_gravity="right"
+            />
+
+    </LinearLayout>
+</LinearLayout>

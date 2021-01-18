@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/lnl_row_client"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="3dp"
+    android:foreground="?android:selectableItemBackground"
+    android:clickable="true"
+    android:background="@drawable/linear_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/img_client_profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/box"
+            android:layout_margin="7dp"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_product_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="8 DR"
+                    android:textColor="@color/colorGray"
+                    android:textStyle="bold"
+                    android:textSize="14dp"/>
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="9dp"
+                    android:background="@color/colorGrayOverlay"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/txt_client_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:text="Dally Jones"
+                    android:textColor="@color/colorGray"
+                    android:textStyle="bold"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_product_price"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:textColor="@color/colorGreen"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="551"
+                    android:textSize="11dp"/>
+                <TextView
+                    android:id="@+id/txt_client_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:text="55115585"
+                    android:textSize="11dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lnl_status"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="11dp"
+                        android:paddingRight="11dp"
+                        android:textSize="8dp"
+                        android:text="Status"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
