@@ -32,7 +32,7 @@ public class SingleClientSalesAdapter extends RecyclerView.Adapter<SingleClientS
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView client_id,product_id,quantity,issue_at,total_amount,paid_amount,balance_amount,txt_status;
+        public TextView client_id,product_id,quantity,issue_at,total_amount,paid_amount,balance_amount,txt_status,txt_receipt;
         public LinearLayout lnl_row_client,lnl_status;
         public ImageView icon_status;
 
@@ -40,6 +40,7 @@ public class SingleClientSalesAdapter extends RecyclerView.Adapter<SingleClientS
             super(view);
             db_helper = new EReportDB_Helper(context);
             client_id = view.findViewById(R.id.txt_compny_name);
+            txt_receipt = view.findViewById(R.id.txt_receipt_nbr);
             product_id = view.findViewById(R.id.txt_company_tin);
             quantity = view.findViewById(R.id.txt_qty);
             total_amount = view.findViewById(R.id.txt_product_total_amount);
@@ -95,6 +96,7 @@ public class SingleClientSalesAdapter extends RecyclerView.Adapter<SingleClientS
         final Sale sale = salesListFiltered.get(position);
         holder.client_id.setText(String.valueOf(sale.getClient_name()));
         holder.product_id.setText(String.valueOf(sale.getProduct_name()));
+        holder.txt_receipt.setText(String.valueOf(sale.getReceipt_nbr()));
         holder.quantity.setText(String.valueOf(sale.getQuantity() + " Items"));
         holder.paid_amount.setText(String.valueOf(sale.getPrice_paid()+ " Frw"));
         holder.balance_amount.setText(String.valueOf(sale.getPrice_remain()+ " Frw"));

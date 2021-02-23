@@ -6,6 +6,7 @@ public class Sale {
     private int  id;
     private int  client_id;
     private int  product_id;
+    private int  receipt_nbr;
     private String  client_name;
     private String  product_name;
     private int  quantity;
@@ -42,6 +43,14 @@ public class Sale {
 
     public void setProduct_id(int product_id) {
         this.product_id = product_id;
+    }
+
+    public int getReceipt_nbr() {
+        return receipt_nbr;
+    }
+
+    public void setReceipt_nbr(int receipt_nbr) {
+        this.receipt_nbr = receipt_nbr;
     }
 
     public String getClient_name() {

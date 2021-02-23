@@ -23,7 +23,7 @@
 
         <Button
             android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="39dp"
             android:text="Save Type"
             android:layout_margin="5dp"
@@ -32,7 +32,7 @@
             android:drawableTint="@color/colorWhite"
             android:drawableLeft="@drawable/ic_baseline_save_24"
             android:textColor="@color/colorWhite"
-            android:background="@drawable/mybuttton_orange"
+            android:background="@drawable/mybutton"
             android:layout_gravity="right"
             />
 

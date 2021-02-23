@@ -20,22 +20,82 @@
         android:layout_height="match_parent"
         android:background="@drawable/lnl_sales_list_background"
         android:orientation="vertical">
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorGray"
-            android:textSize="15dp"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
-            android:text="List Of Sales"
-            android:padding="9dp"/>
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_compny_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Client"
+                android:textColor="@color/colorGray"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:textSize="11dp"/>
+            <TextView
+                android:id="@+id/txt_invoice_nbr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Invoice No"
+                android:gravity="center"
+                android:textColor="@color/colorGray"
+                android:layout_weight="1"
+                android:textSize="11dp"/>
+            <TextView
+                android:id="@+id/txt_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Product"
+                android:gravity="center"
+                android:textColor="@color/colorGray"
+                android:layout_weight="1"
+                android:textSize="11dp"/>
+            <TextView
+                android:id="@+id/txt_qty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Qty"
+                android:gravity="center"
+                android:textColor="@color/colorGray"
+                android:layout_weight="1"
+                android:textSize="11dp"/>
+            <TextView
+                android:id="@+id/txt_total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Amount"
+                android:textStyle="bold"
+                android:textSize="11dp"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:textColor="@color/colorGray"
+                android:textSize="8dp"
+                android:text="Approve"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerviewClient"
+            android:id="@+id/recyclerviewDispatch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            />
+            android:padding="5dp"/>
     </LinearLayout>
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -46,6 +106,6 @@
         android:backgroundTint="@color/colorPrimary"
         android:layout_gravity="center|bottom"
         app:rippleColor="@color/colorPrimary"
-        android:src="@drawable/ic_baseline_add_24"
+        android:src="@drawable/ic_baseline_qr_code_scanner_24"
         android:layout_margin="16dp"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

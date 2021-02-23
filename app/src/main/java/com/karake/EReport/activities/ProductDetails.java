@@ -1,5 +1,6 @@
 package com.karake.EReport.activities;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,7 +21,6 @@ import android.widget.Toast;
 
 import com.karake.EReport.R;
 import com.karake.EReport.helpers.EReportDB_Helper;
-import com.karake.EReport.models.Client;
 import com.karake.EReport.models.Product;
 import com.karake.EReport.models.ProductType;
 import com.karake.EReport.utils.PrefManager;
@@ -29,6 +29,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDetails extends AppCompatActivity {
+
+
     TextView name,qty,price,email;
     Product product;
     EReportDB_Helper db_helper;
@@ -48,6 +50,7 @@ public class ProductDetails extends AppCompatActivity {
         manager = new PrefManager(getApplicationContext());
         product = db_helper.getProductByID(manager.getCurrentProduct());
         productTypeList = db_helper.getAllProductTypes();
+
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(product.getName());
@@ -87,6 +90,7 @@ public class ProductDetails extends AppCompatActivity {
                 UpdateProductDialog();
             }
         });
+
     }
 
     private void productStatus() {
@@ -183,6 +187,8 @@ public class ProductDetails extends AppCompatActivity {
         dialog = builder.create();
         dialog.show();
     }
+
+
 
     @Override
     public void onBackPressed() {

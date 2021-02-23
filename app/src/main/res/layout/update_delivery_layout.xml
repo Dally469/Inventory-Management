@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="11dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="1dp">
+
+        <LinearLayout
+            android:id="@+id/lnl_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/linear_background"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/img_success"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/fastdelivery"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_success"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:padding="11dp"
+                android:text="Please Approve \n Product delivery to the Client"
+                android:textSize="19dp"
+                android:textStyle="normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lnl_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="111dp"
+                android:layout_height="37dp"
+                android:text="Approve"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"
+                android:padding="5dp"
+                android:drawableTint="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_baseline_check_circle_24"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/mybuttton_gray"
+                android:layout_gravity="right"
+                />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_close"
+                android:layout_width="111dp"
+                android:layout_height="37dp"
+                android:text="Close"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"
+                android:padding="5dp"
+                android:drawableTint="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_baseline_close_24"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/mybutton_close"
+                android:layout_gravity="right"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

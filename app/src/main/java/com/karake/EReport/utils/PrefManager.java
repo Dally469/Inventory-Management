@@ -3,6 +3,8 @@ package com.karake.EReport.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.karake.EReport.models.User;
+
 public class PrefManager {
     SharedPreferences pref;
     SharedPreferences.Editor editor;
@@ -25,6 +27,50 @@ public class PrefManager {
     private static final String CURRENT_CLIENT          = "currentClient";
     private static final String CURRENT_SALES           = "currentSales";
 
+    public void setLoggedUser(User user) {
+        //profile
+        editor.putInt("id",             user.getId());
+        editor.putString("name",        user.getName());
+        editor.putString("email",       user.getEmail());
+        editor.putString("phone",       user.getPhone());
+        //time
+        editor.putString("created_at",  user.getCreated_at());
+        editor.putString("updated_at",  user.getUpdated_at());
+
+        editor.commit();
+    }
+    public User getLoggedUser(){
+        User user = new User();
+        user.setId(pref.getInt("id",0));
+        user.setName(pref.getString("name",""));
+        user.setEmail(pref.getString("email",""));
+        user.setPhone(pref.getString("phone",""));
+
+        user.setCreated_at(pref.getString("created_at",""));
+        user.setUpdated_at(pref.getString("updated_at",""));
+        return user;
+    }
+
+    public void setLoggedUserToken(String Token){
+        editor.putString("token",  Token);
+        editor.commit();
+    }
+
+    public String getLoggedUserToken(){
+
+        return pref.getString("token","");
+    }
+
+    public boolean clearLoggedUser(){
+        editor.putInt("id",             0);
+        editor.putString("name",        "");
+        editor.putString("email",       "");
+        editor.putString("phone",       "");
+        editor.putString("created_at",  "");
+        editor.putString("updated_at",  "");
+        editor.commit();
+        return true;
+    }
 
     public PrefManager(Context context) {
         this._context = context;

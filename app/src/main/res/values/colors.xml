@@ -4,11 +4,13 @@
     <color name="colorPrimaryDark">#03394E</color>
     <color name="colorRed">#A3020F</color>
     <color name="colorRedOverlay">#26A3020F</color>
-    <color name="colorBlue">#2196F3</color>
+    <color name="colorBlue">#022D50</color>
+    <color name="colorBlueOverlay">#1E023660</color>
     <color name="colorNavy">#032A30</color>
     <color name="colorGreen">#0D833C</color>
     <color name="colorGreenOverlay">#260D833C</color>
     <color name="colorNavyOverlay">#26032A30</color>
+    <color name="colorNavyOverlayDark">#7E032A30</color>
     <color name="colorOrange">#FF9800</color>
     <color name="colorOrangeOverlay">#26FF9800</color>
     <color name="colorBlack">#010E0D</color>

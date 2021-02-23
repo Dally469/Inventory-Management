@@ -89,7 +89,7 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         final Client client = clientListFiltered.get(position);
         holder.name.setText(client.getName());
-        holder.phone.setText(client.getPhone());
+        holder.phone.setText(client.getCompantName());
 
     }
 

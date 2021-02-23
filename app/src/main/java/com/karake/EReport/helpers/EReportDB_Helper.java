@@ -75,6 +75,7 @@ public class EReportDB_Helper extends SQLiteOpenHelper{
         public static final String COL_ER_SALE_CLIENT_ID        = "client_id";
         public static final String COL_ER_SALE_CLIENT           = "client_name";
         public static final String COL_ER_SALE_PRODUCT_ID       = "product_id";
+        public static final String COL_ER_SALE_RECEIPT_ID       = "receipt_id";
         public static final String COL_ER_SALE_PRODUCT          = "product_name";
         public static final String COL_ER_SALE_QUANTITY         = "quantity";
         public static final String COL_ER_SALE_QUANTITY_TYPE    = "quantity_type";
@@ -138,6 +139,7 @@ public class EReportDB_Helper extends SQLiteOpenHelper{
             +ER_SALE.COL_ER_SALE_CLIENT_ID+" INTEGER, "
             +ER_SALE.COL_ER_SALE_PRODUCT+" TEXT, "
             +ER_SALE.COL_ER_SALE_PRODUCT_ID+" INTEGER, "
+            +ER_SALE.COL_ER_SALE_RECEIPT_ID+" INTEGER, "
             +ER_SALE.COL_ER_SALE_QUANTITY_TYPE+" INTEGER, "
             +ER_SALE.COL_ER_SALE_QUANTITY+" INTEGER, "
             +ER_SALE.COL_ER_SALE_PRICE_PAID+" INTEGER, "
@@ -197,6 +199,7 @@ public class EReportDB_Helper extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
         values.put(ER_SALE.COL_ER_SALE_CLIENT_ID, sale.getClient_id());
         values.put(ER_SALE.COL_ER_SALE_PRODUCT_ID, sale.getProduct_id());
+        values.put(ER_SALE.COL_ER_SALE_RECEIPT_ID, sale.getReceipt_nbr());
         values.put(ER_SALE.COL_ER_SALE_CLIENT, sale.getClient_name());
         values.put(ER_SALE.COL_ER_SALE_PRODUCT, sale.getProduct_name());
         values.put(ER_SALE.COL_ER_SALE_QUANTITY, sale.getQuantity());
@@ -473,6 +476,7 @@ public class EReportDB_Helper extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
         values.put(ER_SALE.COL_ER_SALE_CLIENT_ID, sale.getClient_id());
         values.put(ER_SALE.COL_ER_SALE_PRODUCT_ID, sale.getProduct_id());
+        values.put(ER_SALE.COL_ER_SALE_RECEIPT_ID, sale.getReceipt_nbr());
         values.put(ER_SALE.COL_ER_SALE_CLIENT, sale.getClient_name());
         values.put(ER_SALE.COL_ER_SALE_PRODUCT, sale.getProduct_name());
         values.put(ER_SALE.COL_ER_SALE_QUANTITY, sale.getQuantity());
@@ -657,6 +661,7 @@ public class EReportDB_Helper extends SQLiteOpenHelper{
                 sale.setId(cursor.getInt(cursor.getColumnIndex(TABLE_ID)));
                 sale.setClient_id(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_CLIENT_ID)));
                 sale.setProduct_id(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_PRODUCT_ID)));
+                sale.setReceipt_nbr(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_RECEIPT_ID)));
                 sale.setClient_name(cursor.getString(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_CLIENT)));
                 sale.setProduct_name(cursor.getString(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_PRODUCT)));
                 sale.setQuantity(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_QUANTITY)));
@@ -692,6 +697,7 @@ public class EReportDB_Helper extends SQLiteOpenHelper{
                 sale.setId(cursor.getInt(cursor.getColumnIndex(TABLE_ID)));
                 sale.setClient_id(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_CLIENT_ID)));
                 sale.setProduct_id(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_PRODUCT_ID)));
+                sale.setReceipt_nbr(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_RECEIPT_ID)));
                 sale.setClient_name(cursor.getString(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_CLIENT)));
                 sale.setProduct_name(cursor.getString(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_PRODUCT)));
                 sale.setQuantity(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_QUANTITY)));
@@ -727,6 +733,7 @@ public class EReportDB_Helper extends SQLiteOpenHelper{
                 sale.setId(cursor.getInt(cursor.getColumnIndex(TABLE_ID)));
                 sale.setClient_id(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_CLIENT_ID)));
                 sale.setProduct_id(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_PRODUCT_ID)));
+                sale.setReceipt_nbr(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_RECEIPT_ID)));
                 sale.setClient_name(cursor.getString(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_CLIENT)));
                 sale.setProduct_name(cursor.getString(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_PRODUCT)));
                 sale.setQuantity(cursor.getInt(cursor.getColumnIndex(ER_SALE.COL_ER_SALE_QUANTITY)));

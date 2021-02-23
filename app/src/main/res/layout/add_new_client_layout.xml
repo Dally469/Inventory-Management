@@ -57,13 +57,14 @@
             android:hint="Address"/>
         <Button
             android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="39dp"
             android:text="Save Client"
             android:layout_margin="5dp"
+            android:padding="5dp"
             android:textAllCaps="false"
             android:drawableTint="@color/colorWhite"
-            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:drawableLeft="@drawable/ic_baseline_check_circle_24"
             android:textColor="@color/colorWhite"
             android:background="@drawable/mybuttton"
             android:layout_gravity="right"
